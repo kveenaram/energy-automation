@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ParabankLoginPage } from '../../page-objects/ParabankLoginPage';
 
-test('Login with random credentials should fail', async ({ page }) => {
+test('Login with invalid credentials should fail', async ({ page }) => {
     const loginPage = new ParabankLoginPage(page);
     await loginPage.goto();
     await loginPage.login('invalidser', 'invalidPass');
