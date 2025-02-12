@@ -11,7 +11,7 @@
 4. Run `npm run build` to compile TypeScript files.
 
 ## Running Tests
-- All tests: ```npm test```
+- All tests: ```npm run test:all```
 - UI tests only: ```npm run test:ui```
 - API tests only: ```npm run test:api```
 - With browser visible: ```npm run test:headed```
