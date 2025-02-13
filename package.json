@@ -5,9 +5,10 @@
   "scripts": {
         "test:ui": "npx playwright test tests/ui",
         "test:api": "npx playwright test tests/api",
-        "test:all": "npx playwright test",
+        "test": "npx playwright test",
         "test:headed": "npx playwright test --headed",
-        "report": "npx playwright show-report"
+       // "report": "npx playwright show-report"
+        "report": "allure serve allure-results"
   },
   "keywords": [],
   "author": "",

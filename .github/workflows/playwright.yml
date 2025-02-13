@@ -40,6 +40,9 @@ jobs:
       - name: Generate Allure report
         run: npm run report
 
+      - name: Create allure-results directory
+        run: mkdir -p allure-results
+
       - name: Upload Allure report as artifact
         uses: actions/upload-artifact@v4
         with:
