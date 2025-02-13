@@ -7,7 +7,6 @@
         "test:api": "npx playwright test tests/api",
         "test": "npx playwright test",
         "test:headed": "npx playwright test --headed",
-       // "report": "npx playwright show-report"
         "report": "allure serve allure-results"
   },
   "keywords": [],
