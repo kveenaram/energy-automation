@@ -31,20 +31,28 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run tests
-        run: npm test
-
       - name: Install Allure
         run: npm install -g allure-commandline --save-dev
 
-      - name: Generate Allure report
-        run: npm run report
+      - name: Run tests
+        run: npx playwright test --reporter=line,allure-playwright
 
-      - name: Create allure-results directory
-        run: mkdir -p allure-results
+      - name: Generate Allure Report
+        if: always()
+        run:  allure generate allure-results --clean -o allure-report
 
-      - name: Upload Allure report as artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: allure-report
-          path: allure-results
+          path: allure-report/
+          retention-days: 30
+      
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: allure-results
+          path: allure-results/
+          retention-days: 30
