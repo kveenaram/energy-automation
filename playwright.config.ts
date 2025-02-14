@@ -4,7 +4,7 @@ const config: PlaywrightTestConfig = {
   testDir: './tests',
   timeout: 30000,
   retries: 1,
-  reporter: [['html'], ['list']],
+  reporter: [['html'], ['list'],['allure-playwright']],
   use: {
     baseURL: 'https://parabank.parasoft.com',
     headless: true,
