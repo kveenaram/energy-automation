@@ -1,7 +1,7 @@
 # Automated Test Framework
 
 ## Prerequisites
-- Node.js 14 or higher
+- Node.js 18.18 or later
 - npm
 
 ## Setup
@@ -11,7 +11,7 @@
 4. Run `npm run build` to compile TypeScript files.
 
 ## Running Tests
-- All tests: ```npm run test:all```
+- All tests: ```npm run test```
 - UI tests only: ```npm run test:ui```
 - API tests only: ```npm run test:api```
 - With browser visible: ```npm run test:headed```
