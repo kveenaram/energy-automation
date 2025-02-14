@@ -16,7 +16,7 @@ export class ParabankLoginPage {
   }
 
   async goto() {
-    await this.page.goto('https://parabank.parasoft.com/parabank/index.htm');
+    await this.page.goto('/');
   }
 
   async login(username: string, password: string) {
